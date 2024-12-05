@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadsap,Everett - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+<header id="home" style="background-color: #1f1f1f;">
+    <div class="container">
+        <div class="header-content">
+            <div class="header-text">
+                <h1>Hi, I'm <span>Everett</span></h1>
+                <h2>Cadsap from Philippines</h2>
+                <p class="title" id="typing-title">UI/UX Designer & Web Developer</p>
+                <p class="description">Passionate about creating beautiful and functional digital experiences</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<nav class="navbar">
+    <div class="container">
+        <div class="nav-brand">
+            <a href="#home">Everett</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-item">Home</a></li>
+            <li><a href="#about" class="nav-item">About</a></li>
+            <li><a href="#projects" class="nav-item">Projects</a></li>
+            <li><a href="#skills" class="nav-item">Skills</a></li>
+            <li><a href="#contact" class="nav-item">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+<section id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="image/evo1.png" alt="Everett's Image" class="profile-pic shadow">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hi, My name is Everett I'm 21 and a BSIT student based in University of the Cordilleras. I have a strong passion for the technologies related to QA and AI.
+                    Outside of my regular activities, I'm a rider, car enthusiast, and barista.
+                    I'm continuously thrilled to partner with individuals and teams who wholeheartedly embrace my fervor for crafting extraordinary experiences. Your visit to my portfolio is deeply appreciated!</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab(event, 'development')">Development</p>
+                    <p class="tab-links" onclick="opentab(event, 'design')">Design</p>
+                    <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="development">
+                    <ul>
+                        <li><span>Full Stack Development</span><br>Not started yet - Planning to learn MERN stack</li>
+                        <li><span>Web Development</span><br>Not started yet - Currently learning HTML/CSS basics</li>
+                        <li><span>App Development</span><br>Not started yet - Future learning goal</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="design">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                        <li><span>Web Design</span><br>Website Design</li>
+                        <li><span>App Design</span><br>Mobile App Design</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2016-2021</span><br>Baguio City National High School</li>
+                        <li><span>2022-2024</span><br>University of the Cordilleras</li>
+                        <li><span>2024-current</span><br>University of the Cordilleras</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="projects">
+    <div class="container">
+        <h1 class="sub-title">Projects</h1>
+        <div class="projects-list">
+            <div class="project-item">
+                <h2>Grocery Bill Calculator</h2>
+                <p>An interactive web application that helps users calculate their grocery bills. Features include item categorization, tax calculation, discount application, and the ability to save shopping lists for future reference.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">Java</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" target="_blank">Live Demo</a>
+                    <a href="#" target="_blank">GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <h2>Online Shopping Cart</h2>
+                <p>A full-featured shopping cart system with product filtering, real-time price updates, and secure checkout integration. Includes user authentication, wishlist functionality, and order tracking.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">Java</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" target="_blank">Live Demo</a>
+                    <a href="#" target="_blank">GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <h2>Portfolio Website</h2>
+                <p>A responsive personal portfolio website built from scratch showcasing my skills and projects. Features smooth scrolling, dynamic content, and modern design principles.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">JavaScript</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" target="_blank">Live Demo</a>
+                    <a href="#" target="_blank">GitHub</a>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+</section>
+<section id="skills">
+    <div class="container">
+        <h1 class="sub-title">Skills & Expertise</h1>
+        <div class="projects-list">
+            <div class="project-item">
+                <h2>Programming Languages</h2>
+                <div class="skill">
+                    <p>HTML <span class="percentage">45%</span></p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 45%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>CSS <span class="percentage">30%</span></p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 30%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>Java <span class="percentage">15%</span></p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 15%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <h2>Tools & Technologies</h2>
+                <div class="skill">
+                    <p>Github <span class="percentage">17%</span></p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 17%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>Web Design <span class="percentage">20%</span></p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 20%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="contact">
+    <div class="container">
+        <h1 class="sub-title">Contact Me</h1>
+        <div class="contact-info">
+            <div class="contact-left project-item">
+                <p>
+                    <i class="fas fa-phone"></i>
+                    <span>+63 910 695 0983</span>
+                </p>
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    <span><ww class="everett">everett</ww>cadsap@gmail.com</span>
+                </p>
+            </div>
+            <div class="social-icons project-item">
+                <a href="https://www.facebook.com/everett.cadsap.5" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/48.everett/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://github.com/Everett23/Everett23" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(event, tabname) {
+        for (let tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (let tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            const navbarHeight = document.querySelector('.navbar').offsetHeight;
+            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+            
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    let timeout;
+    let isMouseMoving = true;
+
+    // Function to hide navbar
+    function hideNavbar() {
+        const navbar = document.querySelector('.navbar');
+        navbar.classList.add('navbar-hidden');
+        isMouseMoving = false;
+    }
+
+    // Function to show navbar
+    function showNavbar() {
+        const navbar = document.querySelector('.navbar');
+        navbar.classList.remove('navbar-hidden');
+        isMouseMoving = true;
+    }
+
+    // Reset timer on mouse movement
+    document.addEventListener('mousemove', () => {
+        showNavbar();
+        clearTimeout(timeout);
+        timeout = setTimeout(hideNavbar, 5000); // 5000ms = 5 seconds
+    });
+
+    // Show navbar when mouse moves to top of screen
+    document.addEventListener('mousemove', (e) => {
+        if (e.clientY <= 60) { // Detect mouse near top of screen
+            showNavbar();
+        }
+    });
+
+    // Initial timer
+    timeout = setTimeout(hideNavbar, 5000);
+</script>
+</body>
+</html>

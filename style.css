@@ -1,0 +1,811 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:  'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(135deg, #000000, #000000);
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 70px;
+}
+#header{
+    width: 50%;
+    height: 100vh;
+    /* CHANGE THE IMAGE IT WONT FCKIN FIT IN THE WEBSITE*/
+    background-image: url(image/evo1.png);
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 10px 5%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 140px;
+    filter: brightness(1.1) contrast(1.1);
+    transition: all 0.3s ease;
+    image-rendering: -webkit-optimize-contrast;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.logo:hover {
+    filter: brightness(1.2) contrast(1.2);
+    transform: scale(1.05);
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 5px 0;
+}
+
+nav ul li a{
+    color: #eee7e7;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top:20% ;
+    font-size: 30px;
+    text-align: center;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.header-text h1 span{
+    color: #8f0a0a;
+}
+/*----------about----------*/
+#about{
+    padding: 80px 0;
+    color: floralwhite;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+    max-width: 100%;
+    height: auto;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #8f0a0a;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+    justify-content: space-between;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #8f0a0a;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents {
+    display: none;
+    padding: 20px;
+    border: 1px solid #4b61e2;
+    border-radius: 5px;
+    background-color: #3331316e;
+    margin-top: 10px;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #020002;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+span {
+    font-weight: bold;
+    color: #eee8e8;
+}
+
+/*-------------services-----------*/
+#services {
+    padding: 30px 0;
+}
+
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.service-item {
+    background: #262626;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.5s;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 32px;  /* Slightly larger icons */
+    margin-right: 25px;  /* More spacing between icons */
+    color: #fff;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);  /* Custom easing for smoother motion */
+    display: inline-block;
+    position: relative;  /* For pseudo-element effects */
+    padding: 8px;  /* Larger hit area */
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Enhanced hover effects for each platform */
+.social-icons a .fa-facebook:hover {
+    color: #8f0a0a;
+    transform: translateY(-5px) scale(1.15);
+    filter: drop-shadow(0 0 12px rgba(143, 10, 10, 0.7));
+}
+
+.social-icons a .fa-instagram:hover {
+    color: #8f0a0a;
+    transform: translateY(-5px) scale(1.15);
+    filter: drop-shadow(0 0 12px rgba(143, 10, 10, 0.7));
+}
+
+.social-icons a .fa-github:hover {
+    color: #8f0a0a;
+    transform: translateY(-5px) scale(1.15);
+    filter: drop-shadow(0 0 12px rgba(143, 10, 10, 0.7));
+}
+
+/* Improved pulse animation with smoother timing */
+@keyframes pulse {
+    0% { 
+        transform: scale(1);
+        filter: brightness(1);
+    }
+    50% { 
+        transform: scale(1.12);
+        filter: brightness(1.2);
+    }
+    100% { 
+        transform: scale(1);
+        filter: brightness(1);
+    }
+}
+
+/* Add floating effect */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Apply animations on hover */
+.social-icons a:hover {
+    animation: float 1.5s ease-in-out infinite;
+}
+
+/* Optional: Add subtle glow effect on initial state */
+.social-icons a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, transparent 70%);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.social-icons a:hover::before {
+    opacity: 1;
+}
+
+/* Style for contact information */
+.contact-left p {
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+.contact-left i {
+    color: #333;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+#skills {
+    padding: 50px 0;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skills-category {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 1rem;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.skills-category h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.skill {
+    margin-bottom: 1.5rem;
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+.skill-bar {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    background: linear-gradient(90deg, #8f0a0a, #b30c0c);
+    border-radius: 4px;
+    transition: width 0.5s ease-in-out;
+}
+
+.profile-pic {
+    border: 5px solid #ccc; /* Light gray border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 15px rgba(155, 6, 18, 0.7), /* Neon glow */
+                0 0 30px rgba(155, 6, 18, 0.7), 
+                0 0 45px rgba(155, 6, 18, 0.7);
+    filter: brightness(1.1) contrast(1.2); /* Enhance brightness and contrast */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.profile-pic:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    filter: brightness(1.2) contrast(1.3); /* Further enhance on hover */
+    box-shadow: 0 0 20px rgba(155, 6, 18, 0.7), /* Enhanced neon glow on hover */
+                0 0 40px rgba(155, 6, 18, 0.7), 
+                0 0 60px rgba(155, 6, 18, 0.7);
+}
+
+/* Media query for tablets and larger screens */
+@media (min-width: 768px) {
+    nav ul {
+        flex-direction: row;
+    }
+
+    .header-text {
+        text-align: left;
+    }
+
+    .container {
+        padding: 10px 10%;
+    }
+}
+
+/* Media query for desktops and larger screens */
+@media (min-width: 1024px) {
+    .row {
+        flex-direction: row;
+    }
+
+    .about-col-1, .about-col-2 {
+        flex-basis: 45%;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Optional: Add padding-top to sections to account for fixed navigation if you have any */
+section {
+    scroll-margin-top: 2rem; /* Adjusts scroll position to account for fixed headers */
+}
+
+/* Optional: Active state for navigation links */
+nav ul li a.active {
+    color: #ff004f;
+}
+
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-item {
+    background: linear-gradient(145deg, #262626, #1a1a1a);
+    border: 2px solid #ff000000;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.2),
+                inset 0 0 10px rgba(255, 0, 0, 0.1);
+    animation: neonPulse 2s infinite;
+    padding: 2rem;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-item h2 {
+    color: #ff004f;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-item p {
+    color: #e0e0e0;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.project-tech {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.tech-tag {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    color: #8f0a0a;
+}
+
+.project-links {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.project-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #8f0a0a, #b30c0c);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.project-links a:hover {
+    background: linear-gradient(90deg, #b30c0c, #8f0a0a);
+    transform: translateY(-3px);
+}
+
+.nav-brand .logo {
+    width: 150px;  /* Adjust this value based on your needs */
+    height: auto;
+    filter: brightness(1.2) contrast(1.1);
+    object-fit: contain;  /* Maintains aspect ratio */
+    max-width: 100%;     /* Ensures responsiveness */
+}
+
+/* Optional: Add hover effect */
+.nav-brand .logo:hover {
+    filter: brightness(1.3) contrast(1.2);
+    transition: filter 0.3s ease;
+}
+
+.project-item, .skill {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+.project-item:hover, .skill:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 15px 0;
+    transition: all 0.5s ease;
+    transform: translateY(0);
+}
+
+.navbar-hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.navbar:hover {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #000000, #000000, #000000);
+    color: white;
+    padding: 100px 0 50px 0; /* Added top padding for fixed navbar */
+    background-color: #1f1f1f;
+    color: #fff;
+}
+
+.header-content {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.header-text h1 span {
+    color: #8f0a0a;
+}
+
+.header-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+}
+
+.header-text .title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #8f0a0a;
+}
+
+.header-text .description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #cccccc;
+}
+
+.cta-buttons {
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    margin-right: 15px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #8f0a0a;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #b30c0c;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border: 2px solid #8f0a0a;
+    color: #8f0a0a;
+}
+
+.btn-secondary:hover {
+    background-color: #8f0a0a;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Add media queries for responsiveness */
+@media (max-width: 768px) {
+    .header-text h1 {
+        font-size: 2.5rem;
+    }
+    
+    .header-text h2 {
+        font-size: 1.8rem;
+    }
+    
+    .header-text .title {
+        font-size: 1.2rem;
+    }
+    
+    .cta-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .btn {
+        margin-right: 0;
+        text-align: center;
+    }
+}
+
+.nav-brand a {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #8f0a0a;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-brand a:hover {
+    color: #b30c0c;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    color: #fff; /* Change text color to white */
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #8f0a0a;
+    transition: width 0.3s ease;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+}
+
+.nav-item:hover {
+    color: #8f0a0a;
+}
+
+/* Add smooth scrolling to the whole page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Responsive navigation */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .nav-item {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+/* Add neon animation */
+@keyframes neonPulse {
+    0% {
+        border-color: #ff000080;
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.2),
+                    inset 0 0 10px rgba(255, 0, 0, 0.1);
+    }
+    50% {
+        border-color: #ff0000;
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.4),
+                    inset 0 0 20px rgba(255, 0, 0, 0.2);
+    }
+    100% {
+        border-color: #ff000080;
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.2),
+                    inset 0 0 10px rgba(255, 0, 0, 0.1);
+    }
+}
+
+/* Skills category with neon border */
+.skills-category {
+    border: 2px solid #ff000000;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.2),
+                inset 0 0 10px rgba(255, 0, 0, 0.1);
+    animation: neonPulse 2s infinite;
+}
+
+/* Profile picture with neon effect */
+.profile-pic {
+    border: 3px solid #ff0000;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5),
+                0 0 30px rgba(255, 0, 0, 0.3),
+                0 0 45px rgba(255, 0, 0, 0.1);
+}
+
+/* Tab contents with neon border */
+.tab-contents {
+    border: 2px solid #ff000080;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+}
+
+/* Skill bars with neon effect */
+.skill-bar {
+    border: 1px solid #ff000060;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.1);
+}
+
+/* Navigation items with neon hover effect */
+.nav-item:hover {
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5),
+                 0 0 20px rgba(255, 0, 0, 0.3),
+                 0 0 30px rgba(255, 0, 0, 0.1);
+}
+
+/* Buttons with neon effect */
+.btn-primary, .btn-secondary {
+    border: 2px solid #ff000080;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    border-color: #ff0000;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5),
+                0 0 40px rgba(255, 0, 0, 0.3);
+}
+
+.title {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid;
+    animation: typing 3.5s steps(40, end) infinite,
+               blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    0% { width: 0 }
+    100% { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #fff; /* or any color you prefer */ }
+}
+
+.shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.percentage {
+    float: right;
+    color: #666;
+}
+
+.skill p {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+
